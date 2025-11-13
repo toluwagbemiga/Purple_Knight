@@ -7,25 +7,40 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.lifecycle.viewmodel.compose.viewModel
+import com.bit.purple.project.ui.screens.Auth.Login.LoginScreen
+import com.bit.purple.project.ui.screens.Auth.SignUp.SignupScreen
+import com.bit.purple.project.ui.screens.LandingPage.LandingScreen
 import com.bit.purple.project.ui.screens.Splash.SplashScreen
 
 
-object Routes {
-    const val LOGIN = "login"
-    const val SIGNUP = "signup"
-    const val SPLASH = "splash"
-}
+
 
 @Composable
 fun AppNavGraph(navController: NavHostController, innerPadding: PaddingValues) {
     NavHost(
         navController = navController,
-        startDestination = Routes.SPLASH, // Set your starting screen
+        //Start Screen
+        startDestination = Routes.SPLASH,
         modifier = Modifier.padding(innerPadding)
     ) {
+        //Splash screen
         composable(Routes.SPLASH) {
             SplashScreen(navController = navController)
         }
+        //Landing page
+        composable(Routes.LANDING_PAGE) {
+            LandingScreen(navController = navController)
+        }
+
+        //Login
+        composable(Routes.LOGIN){
+            LoginScreen(navController = navController)
+        }
+
+        composable(Routes.SIGN_UP){
+            SignupScreen(navController = navController)
+        }
+
+
     }
 }

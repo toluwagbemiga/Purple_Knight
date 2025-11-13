@@ -12,3 +12,6 @@ val Pink40 = Color(0xFF7D5260)
 
 val PrimaryColor = Color(0xFF003399)
 val SecondaryColor = Color(0xFF03DAC5)
+
+val focusedTextField = Color(0xFFCCCCCC)
+val unfocusedTextField = Color(0xFFE3E3E3)

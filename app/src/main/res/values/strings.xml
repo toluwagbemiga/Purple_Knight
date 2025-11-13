@@ -3,4 +3,6 @@
     <string name="app_version">1.0.0</string>
     <string name="home_text">Get your Money</string>
     <string name="home_text2">Under Control</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
 </resources>
