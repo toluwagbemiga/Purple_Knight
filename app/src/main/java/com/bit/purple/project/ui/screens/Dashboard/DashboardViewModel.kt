@@ -104,9 +104,9 @@ class DashboardViewModel @Inject constructor(
 // --- Dummy Data (Remove this once your Repository is working) ---
  val sampleNotes = listOf(
     Note(1, "I and my husbanb leaving in the house,", "Sunday He brought the person home....", "Sunday Topic", "08:11 PM"),
-    Note(2, "Ministering: Pastor David Adeoye", "", "Sunday Topic", "08:11 PM"),
-    Note(3, "Ministering: Pastor David Adeoye", "", "Sunday Topic", "08:11 PM"),
-    Note(4, "Ministering: Pastor David Adeoye", "", "Sunday Topic", "08:11 PM"),
+    Note(2, "Ministering: Pastor David Adeoye", "Sunday Topic", "Sunday Topic", "08:11 PM"),
+    Note(3, "Ministering: Pastor David Adeoye", "Sunday Topic", "Sunday Topic", "08:11 PM"),
+    Note(4, "Ministering: Pastor David Adeoye", "Sunday Topic", "Sunday Topic", "08:11 PM"),
     Note(5, "I and my husbanb leaving in the house,", "Sunday He brought the person home....", "Sunday Topic", "08:11 PM"),
-    Note(6, "Ministering: Pastor David Adeoye", "", "Sunday Topic", "08:11 PM")
+    Note(6, "Ministering: Pastor David Adeoye", "Sunday Topic", "Sunday Topic", "08:11 PM")
 )

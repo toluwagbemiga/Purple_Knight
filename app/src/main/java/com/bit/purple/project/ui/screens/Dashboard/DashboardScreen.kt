@@ -1,7 +1,5 @@
 package com.bit.purple.project.ui.screens.Dashboard
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,8 +7,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.GridView
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -249,11 +245,7 @@ fun DashboardNoteItem(
             Spacer(modifier = Modifier.height(4.dp))
         }
 
-        Text(
-            text = note.topic,
-            color = Color.Gray,
-            style = MaterialTheme.typography.bodyMedium
-        )
+
     }
 }
 
@@ -268,10 +260,10 @@ fun DashboardEmptyView(modifier: Modifier = Modifier) {
             // painter = painterResource(id = R.drawable.ic_empty_notes_placeholder)
             Icon(
                 // Placeholder:
-                painter = painterResource(id = android.R.drawable.ic_menu_agenda),
+                painter = painterResource(id = R.drawable.card_back),
                 contentDescription = "No notes",
                 modifier = Modifier.size(120.dp),
-                tint = Color.Gray.copy(alpha = 0.5f)
+                //tint = Color.Gray.copy(alpha = 0.5f)
                 // Use Color.Unspecified to show your drawable's original colors
                 // tint = Color.Unspecified
             )
@@ -293,26 +285,35 @@ fun DashboardBottomBar(
     onToggleView: () -> Unit // Add this
 ) {
     // This Row is the content for the Scaffold's bottomBar slot
-    Row(
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            // Padding *inside* the bar
             .padding(horizontal = 16.dp, vertical = 16.dp),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
+        contentAlignment = Alignment.Center // Centers all content by default
     ) {
+        // 1. Note Count (Centered)
+        // The Box's Alignment.Center ensures this Text is perfectly centered horizontally.
         Text(
             text = "$noteCount Notes",
             color = MaterialTheme.colorScheme.primary,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp
         )
-        IconButton(onClick = onToggleView) { // Use the event
-            Icon(
-                imageVector = Icons.Default.GridView,
-                contentDescription = "Grid View",
-                tint = MaterialTheme.colorScheme.primary
-            )
+
+        // 2. Icon (Pinned to the Far Right)
+        // We use a separate Row/Box and align it to the End of the parent Box.
+        Row(
+            modifier = Modifier.fillMaxWidth(), // This Row stretches to enable right alignment
+            horizontalArrangement = Arrangement.End,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onToggleView) {
+                Icon(
+                    painter = painterResource(R.drawable.four_dots),
+                    contentDescription = "Grid View",
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
         }
     }
 }
