@@ -1,14 +1,17 @@
-package com.bit.purple.project.ui.screens.Auth.Login
+package com.bit.purple.project.ui.screens.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class LoginViewModel : ViewModel() {
+@HiltViewModel
+class LoginViewModel @Inject constructor() : ViewModel() {
     private val _state = MutableStateFlow(LoginScreenState())
     val state: StateFlow<LoginScreenState> = _state.asStateFlow()
 
@@ -20,7 +23,7 @@ class LoginViewModel : ViewModel() {
         if (!password.contains(Regex(".*[A-Z].*"))) return false // At least one uppercase
         if (!password.contains(Regex(".*[a-z].*"))) return false // At least one lowercase
         if (!password.contains(Regex(".*[0-9].*"))) return false // At least one number
-        if (!password.contains(Regex(".*[!@#\$%^&+=].*"))) return false // At least one special character
+        if (!password.contains(Regex(".*[!@#$%^&+=].*"))) return false // At least one special character
         return true
     }
 

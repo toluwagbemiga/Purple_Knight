@@ -1,4 +1,4 @@
-package com.bit.purple.project.ui.screens.Auth.SignUp
+package com.bit.purple.project.ui.screens.auth.signup
 
 data class SignUpScreenState (
     val email: String = "",

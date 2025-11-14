@@ -1,8 +1,38 @@
 <resources>
     <string name="app_name">Purple Knight</string>
     <string name="app_version">1.0.0</string>
-    <string name="home_text">Get your Money</string>
-    <string name="home_text2">Under Control</string>
-    <string name="hide_password">Hide password</string>
-    <string name="show_password">Show password</string>
+
+    <!-- Common Actions -->
+    <string name="action_continue">Continue</string>
+    <string name="action_back">Back</string>
+    <string name="action_close">Close</string>
+
+    <!-- Login Screen -->
+    <string name="login_welcome_message">Welcome Back!</string>
+    <string name="login_prompt">Sign into your account</string>
+    <string name="login_email_label">Email Address</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_forgot_password">Forgot Password?</string>
+    <string name="login_save_details">Save details for Later</string>
+    <string name="login_with_biometrics">Signin with Biometrics</string>
+
+    <!-- Signup Screen -->
+    <string name="signup_get_started">Lets get you started!</string>
+    <string name="signup_password_requirements">Your password must have at least 8 characters including Letters and Numbers</string>
+    <string name="signup_full_name_label">Full Name</string>
+    <string name="signup_confirm_password_label">Confirm Password</string>
+
+    <!-- Error Messages -->
+    <string name="error_invalid_email">Please enter a valid email address.</string>
+    <string name="error_password_complexity">Password must meet all complexity requirements.</string>
+    <string name="error_password_confirm">Confirm Password isn\'t matching with Password.</string>
+    <string name="error_full_name_required">Please enter your Full Name.</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_close_button">Close</string>
+    <string name="cd_info_icon">Info</string>
+    <string name="cd_visibility_on">Show password</string>
+    <string name="cd_visibility_off">Hide password</string>
+    <string name="cd_back_arrow">Back</string>
+
 </resources>

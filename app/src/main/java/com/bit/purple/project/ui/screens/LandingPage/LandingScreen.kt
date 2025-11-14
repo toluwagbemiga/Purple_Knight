@@ -1,6 +1,4 @@
-
 package com.bit.purple.project.ui.screens.LandingPage
-
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

@@ -5,5 +5,7 @@ object Routes {
     const val LANDING_PAGE = "landing"
     const val LOGIN = "login"
     const val SIGN_UP = "signup"
+
+    const val DASHBOARD = "dashboard"
     //const val SIGNUP = "signin"
 }

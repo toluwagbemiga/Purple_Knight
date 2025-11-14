@@ -5,4 +5,4 @@ import androidx.compose.ui.unit.dp
 val SmallCorners = 12.dp
 val MediumCorners = 16.dp
 val LargeCorners = 24.dp
-val ExtraLargeCorners = 3
+val ExtraLargeCorners = 32.dp

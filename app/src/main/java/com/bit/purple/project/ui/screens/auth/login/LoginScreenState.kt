@@ -1,4 +1,4 @@
-package com.bit.purple.project.ui.screens.Auth.Login
+package com.bit.purple.project.ui.screens.auth.login
 
 data class LoginScreenState(
     val email: String = "",

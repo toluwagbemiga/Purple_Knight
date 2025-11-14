@@ -1,14 +1,17 @@
-package com.bit.purple.project.ui.screens.Auth.SignUp
+package com.bit.purple.project.ui.screens.auth.signup
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SignupViewModel : ViewModel() {
+@HiltViewModel
+class SignupViewModel @Inject constructor() : ViewModel() {
     private val _state = MutableStateFlow(SignUpScreenState())
     val state: StateFlow<SignUpScreenState> = _state.asStateFlow()
 

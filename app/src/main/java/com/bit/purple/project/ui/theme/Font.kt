@@ -1,16 +1,11 @@
 package com.bit.purple.project.ui.theme
 
-import androidx.compose.ui.text.ExperimentalTextApi // <-- ADD THIS IMPORT
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-// REMOVED: import androidx.compose.ui.text.font.Font.VariationSettings
 import com.bit.purple.project.R
 
-val JostVariable = FontFamily(
-    Font(
-        resId = R.font.jost_variablefont_wght,
-        weight = FontWeight.Normal
-
-    )
-)
+/**
+ * Defines the Jost font family using the single variable font file.
+ * This allows us to use different weights (e.g., Normal, Bold) from the same font resource.
+ */
+val Jost = FontFamily(Font(R.font.jost_variablefont_wght))
